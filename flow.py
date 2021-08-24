@@ -47,7 +47,7 @@ class Flow:
         
         return normals
 
-    def step_flow(self, k=50):
+    def step_flow(self, k=10): #uses 10 nearest neighbors to calculate the normal
         normals = self.calc_normal_LMS(k)
         v = np.zeros(3)
         gradient = np.zeros(3)
